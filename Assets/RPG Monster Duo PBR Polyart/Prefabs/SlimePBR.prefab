@@ -388,7 +388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4023215848608658
 Transform:
   m_ObjectHideFlags: 0
@@ -396,7 +396,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919012471076396}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -404,7 +404,7 @@ Transform:
   - {fileID: 4127066169186206}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &95161444847813696
 Animator:
   serializedVersion: 3
@@ -436,6 +436,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8efbb22b55bda40a6170d9422e66d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  hp: 0
+  power: 0
+  shield: 0
+  speed: 5
 --- !u!1 &1989916952965676
 GameObject:
   m_ObjectHideFlags: 0
