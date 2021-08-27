@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Transform[] MovePoints;
 
+    List<MonsterController> SpawnedMonsters = new List<MonsterController>();
+
     public static GameManager instance = null;
 
     private void Awake()
@@ -27,6 +29,19 @@ public class GameManager : MonoBehaviour
             }
 
             DontDestroyOnLoad(this);
+        }
+    }
+
+    public void DeleteMonster(MonsterController monster)
+    {
+        SpawnedMonsters.Remove(monster);
+    }
+
+    public void AllAttack()
+    {
+        foreach (MonsterController monster in SpawnedMonsters)
+        {
+            monster.Hit(10f);
         }
     }
 
@@ -52,13 +67,11 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CoSpawnMonster()
     {
-        Debug.Log("?");
         foreach (GameObject o in MonsterPrefabs)
         {
             GameObject monster = Instantiate(o, MonsterParent);
-            monster.GetComponent<MonsterController>().MonsterMoving();
-
-            Debug.Log(monster.name + "생성");
+            SpawnedMonsters.Add(monster.GetComponent<MonsterController>());
+            SpawnedMonsters[SpawnedMonsters.Count-1].MonsterMoving();
 
             yield return new WaitForSeconds(2.5f);
         }

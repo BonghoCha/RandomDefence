@@ -635,10 +635,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  hp: 0
+  hp: 100
   power: 0
   shield: 0
   speed: 5
+  material: {fileID: 2100000, guid: c3facc6536b8be44db48df63cd0279e7, type: 2}
 --- !u!1 &7487410016656624449
 GameObject:
   m_ObjectHideFlags: 0
